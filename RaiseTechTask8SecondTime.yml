@@ -313,22 +313,15 @@ Resources:
       SecurityGroupIds: 
       - !Ref SecurityGroupPublic
       Tenancy: "default"
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: "true"
+          DeviceIndex: "0"
+          SubnetId: !Ref PublicSubnet1a      
+          GroupSet: 
+           - !Ref SecurityGroupPublic
       Tags:
       - Key: Name
         Value: MyEC2
-        
-  PublicDNS:
-    Description: Public DNSName of the newly created EC2 instance
-    Value:
-      Fn::GetAtt:
-      - MyEC2
-      - PublicDnsName
-  PublicIP:
-    Description: Public IP Address of the newly created EC2 instance
-    Value:
-      Fn::GetAtt:
-      - MyEC2
-      - PublicIp
 
   # ------------------------------ #
   # Target Group
