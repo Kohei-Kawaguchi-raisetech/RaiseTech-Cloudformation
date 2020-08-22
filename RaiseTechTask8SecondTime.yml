@@ -313,12 +313,6 @@ Resources:
       SecurityGroupIds: 
       - !Ref SecurityGroupPublic
       Tenancy: "default"
-      NetworkInterfaces:
-        - AssociatePublicIpAddress: "true"
-          DeviceIndex: "0"
-          SubnetId: !Ref PublicSubnet1a      
-          GroupSet: 
-           - !Ref SecurityGroupPublic
       Tags:
       - Key: Name
         Value: MyEC2
