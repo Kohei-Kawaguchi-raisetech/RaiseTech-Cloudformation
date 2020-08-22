@@ -68,7 +68,7 @@ Parameters:
   CidrBlock:
     Description: Please Type the CidrBlock.
     Type: String
-    Default: 172.16.0.0/16
+    Default: 10.0.0.0/16
 
   # ------------------------------ #
   # RDS Parameters
