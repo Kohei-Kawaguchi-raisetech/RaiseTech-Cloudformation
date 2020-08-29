@@ -313,7 +313,6 @@ Resources:
       SecurityGroupIds: 
       - !Ref SecurityGroupPublic
       Tenancy: "default"
-      KeyName: RaiseTech-EC2.pem
       Tags:
       - Key: Name
         Value: MyEC2
